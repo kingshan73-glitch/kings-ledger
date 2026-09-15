@@ -180,6 +180,10 @@ const EXPENSE_CATEGORIES = [
 const EXTRA_EXPENSE_CATEGORIES = ["카드대금", "대출상환"];
 // 수입 카테고리: DEFAULT_INCOME_CATEGORIES
 const INCOME_CATEGORIES = ["급여", "이자", "증권판매", "환급/캐시백", "기타수입"];
+// 앱이 이름으로 찾는 특수 수입 카테고리 (category-names.ts CATEGORY_NAME.loanIncome).
+// 없으면 통계 화면이 "대출 실행금이 수입에 섞여 있습니다" 경고를 띄운다 — 데모에는 실행금 거래가
+// 없는데도 뜨는 거짓 경보라, 설치 직후 첫 화면이 경고로 시작한다(2026-09-15 클린 설치 검증에서 확인).
+const EXTRA_INCOME_CATEGORIES = ["대출"];
 
 function buildPlan(owner, today) {
   const id = (key) => demoId(owner, key);
@@ -473,6 +477,7 @@ async function ensureCategories(owner) {
 
   const wanted = [
     ...INCOME_CATEGORIES.map((name, i) => ({ name, kind: "income", sort_order: i })),
+    ...EXTRA_INCOME_CATEGORIES.map((name, i) => ({ name, kind: "income", sort_order: 90 + i })),
     ...EXPENSE_CATEGORIES.map((name, i) => ({ name, kind: "expense", sort_order: i })),
     ...EXTRA_EXPENSE_CATEGORIES.map((name, i) => ({ name, kind: "expense", sort_order: 90 + i })),
   ];
