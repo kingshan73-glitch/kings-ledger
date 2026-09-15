@@ -1,0 +1,13 @@
+{
+  "name": "kinghama의 가계부",
+  "short_name": "가계부",
+  "description": "kinghama의 가계부 - 개인 가계 관리",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d6e6e",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/apple-icon.svg", "sizes": "180x180", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

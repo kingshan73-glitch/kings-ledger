@@ -1,0 +1,3 @@
+# Git 훅은 POSIX sh로 실행되므로 CRLF면 shebang이 깨진다(autocrlf=true 환경). LF 고정.
+.githooks/** text eol=lf
+*.sh text eol=lf

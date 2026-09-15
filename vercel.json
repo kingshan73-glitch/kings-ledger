@@ -1,0 +1,10 @@
+{
+  "framework": "nextjs",
+  "regions": ["icn1"],
+  "crons": [
+    {
+      "path": "/api/household/inbox/purge-raw",
+      "schedule": "0 18 * * *"
+    }
+  ]
+}

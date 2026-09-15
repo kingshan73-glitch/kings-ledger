@@ -1,0 +1,95 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.devserver.log
+
+# env files (실제 키가 든 .env.local 은 커밋 금지, 예시 파일만 커밋)
+.env*
+!.env.example
+
+# service account keys
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!components.json
+!vercel.json
+!public/manifest.webmanifest
+
+# omc
+.omc/
+
+# supabase CLI 로컬 캐시 (링크 정보 등 — 커밋 금지)
+supabase/.temp
+supabase/.branches
+
+# vercel
+.vercel
+
+# newsletter runtime artifacts
+/public/screenshots/
+/data/newsletter/
+
+# python 부산물 (scripts/*.py 실행 시 생성 — 커밋 금지)
+__pycache__/
+*.pyc
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+.vercel
+
+# Vercel CLI deploy logs (temp)
+.vercel-deploy*.log
+
+# 감사 산출물·삭제 백업 — 거래 원본(상호·금액·계좌)이 담기므로 원격에 올리지 않는다 
+/output/
+
+# 임시 작업 폴더(개발 로그·일회성 스크립트) — 커밋·배포에 딸려가지 않게 한다.
+tmp/
+
+# 육안 확인용 스크린샷 — 산출물이라 커밋하지 않는다
+.screenshots/
+
+# 작업 스냅샷·백업·엑셀 원본 — 실제 가계 데이터가 들어갈 수 있으므로 저장소에 올리지 않는다.
+outputs/
+backups/
+hh_backups/
+*.xlsx
+
+# 운영 스크립트 원장(무엇을 바꿨는지 기록) — 산출물이라 커밋 대상이 아니다
+scripts/.journal_*.json
+scripts/.journal_*.json.reverted
+scripts/.journal_*
+
+# 앱 화면이 import 하는 데이터 파일은 추적한다
+!src/data/claude-installs.json

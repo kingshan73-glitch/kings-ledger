@@ -1,0 +1,12 @@
+#!/bin/sh
+# push 전 타입체크 강제 — 타입에러가 main에 올라가면 Vercel next build가 실패하고
+# (next.config에 ignoreBuildErrors 없음) 운영이 직전 성공 빌드에 고착된다. (설계 docs/household/67, 2026-07-08 사고)
+# 우회가 필요하면: git push --no-verify
+echo "[pre-push] tsc --noEmit 실행 중…"
+if ! npm run --silent typecheck; then
+  echo ""
+  echo "❌ [pre-push] 타입 에러가 있어 push를 막았습니다. 위 에러를 고치거나, 정말 필요하면 'git push --no-verify'."
+  exit 1
+fi
+echo "[pre-push] ✅ 타입체크 통과"
+exit 0

@@ -1,0 +1,116 @@
+{
+  "scannedAt": "2026-07-23",
+  "count": 11,
+  "items": [
+    {
+      "id": "codex",
+      "name": "Codex CLI",
+      "category": "AI 코딩",
+      "version": "0.145.0",
+      "date": "2026-07-23",
+      "source": "npm 전역",
+      "note": "OpenAI Codex CLI — 보조 에이전트(감독관 모드에서 위임).",
+      "install": "npm install -g @openai/codex"
+    },
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "category": "에디터",
+      "version": "1.130.0",
+      "date": "2026-07-23",
+      "source": "winget (Microsoft.VisualStudioCode)",
+      "note": "코드 에디터 — Claude Code 확장·터미널.",
+      "install": "winget install --id Microsoft.VisualStudioCode -e"
+    },
+    {
+      "id": "github-cli",
+      "name": "GitHub CLI",
+      "category": "버전관리",
+      "version": "2.96.0",
+      "date": "2026-07-21",
+      "source": "winget (GitHub.cli)",
+      "note": "GitHub 연동(gh) — PR·이슈·릴리스.",
+      "install": "winget install --id GitHub.cli -e"
+    },
+    {
+      "id": "adb",
+      "name": "Android Platform-Tools (adb)",
+      "category": "도구",
+      "version": "37.0.0",
+      "date": "2026-07-06",
+      "source": "winget (Google.PlatformTools)",
+      "note": "안드로이드 폰 제어 — 결제수집 매크로 점검(adb).",
+      "install": "winget install --id Google.PlatformTools -e"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "category": "AI 코딩",
+      "version": "2.1.218",
+      "date": "2026-07-04",
+      "source": "네이티브 설치 (~/.local/bin)",
+      "note": "Anthropic 공식 CLI — 이 가계부 앱을 만든 도구.",
+      "install": "irm https://claude.ai/install.ps1 | iex"
+    },
+    {
+      "id": "node",
+      "name": "Node.js",
+      "category": "런타임",
+      "version": "24.18.0",
+      "date": "2026-07-04",
+      "source": "winget (OpenJS.NodeJS.LTS)",
+      "note": "JavaScript 런타임 — Claude Code 실행·앱 빌드의 전제.",
+      "install": "winget install --id OpenJS.NodeJS.LTS -e"
+    },
+    {
+      "id": "npm",
+      "name": "npm",
+      "category": "런타임",
+      "version": "11.16.0",
+      "date": "2026-07-04",
+      "source": "Node.js 번들",
+      "note": "Node 패키지 매니저 — Node.js 설치 시 함께 설치됨.",
+      "install": "(Node.js 설치 시 자동 포함)"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "런타임",
+      "version": "3.12.10",
+      "date": "2026-07-04",
+      "source": "winget (Python.Python.3.12)",
+      "note": "가계부 엑셀 재적재·진단 스크립트 실행용.",
+      "install": "winget install --id Python.Python.3.12 -e"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "category": "버전관리",
+      "version": "2.55.0.2",
+      "date": "2026-07-04",
+      "source": "winget (Git.Git)",
+      "note": "소스 관리 — Claude Code가 커밋·푸시·PR에 사용.",
+      "install": "winget install --id Git.Git -e"
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase CLI",
+      "category": "배포·DB",
+      "version": "2.109.0",
+      "date": "2026-07-04",
+      "source": "npm 전역",
+      "note": "가계부 DB(Supabase) 마이그레이션·조회.",
+      "install": "npm install -g supabase"
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel CLI",
+      "category": "배포·DB",
+      "version": "54.20.1",
+      "date": "2026-07-04",
+      "source": "npm 전역",
+      "note": "가계부 배포(Vercel) — 배포·로그 조회.",
+      "install": "npm install -g vercel"
+    }
+  ]
+}
