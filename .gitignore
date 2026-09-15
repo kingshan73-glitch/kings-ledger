@@ -93,3 +93,6 @@ scripts/.journal_*
 
 # 앱 화면이 import 하는 데이터 파일은 추적한다
 !src/data/claude-installs.json
+
+.vercel
+.env*
