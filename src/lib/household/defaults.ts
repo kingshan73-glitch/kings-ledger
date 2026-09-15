@@ -57,12 +57,16 @@ export const DEFAULT_EXPENSE_CATEGORIES = [
 ];
 
 // 수입 카테고리 (원본 "항목"에서 도출)
+// "대출" 은 앱이 이름으로 찾는 특수 카테고리다(category-names.ts CATEGORY_NAME.loanIncome).
+// 없으면 통계 화면이 대출 실행금을 수입에서 못 걸러내 "수입에 섞여 있습니다" 경고를 띄운다
+// — 실행금 거래가 하나도 없어도 뜨는 거짓 경보다(2026-09-15 클린 설치 검증).
 export const DEFAULT_INCOME_CATEGORIES = [
   "급여",
   "이자",
   "증권판매",
   "환급/캐시백",
   "기타수입",
+  "대출",
 ];
 
 // 가맹점 → 카테고리 기본 매핑 시드.
